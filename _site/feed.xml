@@ -15,5 +15,159 @@
         <guid isPermaLink="true">http://wilsonssss.github.io/wilson/update/2015/12/30/hello-world/</guid>
       </item>
     
+      <item>
+        <title>搭建android sdk mirror </title>
+        <description>&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;server端:&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1.脚本:https://github.com/opencas/mirrors/blob/master/script/bin/android.py 放到服务器(注意定期检查作者是否update脚本)&lt;/li&gt;
+  &lt;li&gt;2.修改脚本中的out_dir为sdk仓库的绝对路径
+   如out_dir = ‘/home/vagrant/android/sdk_mirror/android/repository’&lt;/li&gt;
+  &lt;li&gt;3.开启http服务, 指向/home/vagrant/android/sdk_mirror/&lt;/li&gt;
+  &lt;li&gt;4.设置定时任务(每天的23点50分进行更新) &lt;br /&gt;
+  50 23 * * * /usr/bin/python /home/vagrant/android/sdk_mirror/android/repository/android_fetch.py &amp;gt; /home/vagrant/android/sdk_mirror/android/repository/update_check.txt&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;client端:&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1.运行$AndroidSDK/tools/android&lt;/li&gt;
+  &lt;li&gt;2.菜单栏 - 设置
+    &lt;ul&gt;
+      &lt;li&gt;http proxy server:192.168.199.21（sdk mirror的http host）&lt;/li&gt;
+      &lt;li&gt;http proxy port:8182（sdk mirror的http 端口）&lt;/li&gt;
+      &lt;li&gt;“Use download cache” 打钩, “Clear Cache”&lt;/li&gt;
+      &lt;li&gt;Force https:// to http:// 打钩’&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;3.菜单栏 - packages - reload&lt;br /&gt;
+&lt;img src=&quot;../imgs/sdk_mirror.png&quot; width=&quot;300&quot; align=&quot;center&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 20 Jul 2014 16:19:18 +0800</pubDate>
+        <link>http://wilsonssss.github.io/wilson/update/2014/07/20/android-sdk-mirror/</link>
+        <guid isPermaLink="true">http://wilsonssss.github.io/wilson/update/2014/07/20/android-sdk-mirror/</guid>
+      </item>
+    
+      <item>
+        <title>MAC常用软件</title>
+        <description>&lt;h2 id=&quot;section&quot;&gt;简介&lt;/h2&gt;
+&lt;p&gt;装机必备的MAC软件&lt;/p&gt;
+
+&lt;h2 id=&quot;xcode&quot;&gt;xcode&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;ios开发工具，集成了一些开发插件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;homebrew&quot;&gt;Homebrew&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;在mac下可以更方便的使用linux命令&lt;/li&gt;
+  &lt;li&gt;常用：brew install wget, curl, git&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;iterm-2&quot;&gt;Iterm 2&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;加强型终端&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;oh-my-zsh&quot;&gt;oh-my-zsh&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;zsh终端&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;github/oh-my-zsh&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;oh-my-fish&quot;&gt;oh-my-fish&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;fish终端&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/oh-my-fish/oh-my-fish&quot;&gt;github/oh-my-fish&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;cdto&quot;&gt;CDTO&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;finder插件，使用终端cd到当前目录&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/jbtule/cdtoz&quot;&gt;github/cdto&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;alfred2&quot;&gt;Alfred2&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;快捷打开程序&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;spectacle&quot;&gt;Spectacle&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;分屏工具&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;evernote-international&quot;&gt;Evernote International&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;一款强大的笔记软件，最好使用国际版(International)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://evernote.com/intl/zh-cn/&quot;&gt;link: 国际版&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;dropbox&quot;&gt;Dropbox&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;国外网盘，用于应对一些外国项目时同步文件&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;sublime-text3&quot;&gt;Sublime Text3&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;文本编辑器，插件极其丰富&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;source-tree&quot;&gt;Source Tree&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Git GUI工具&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;macdown&quot;&gt;MacDown&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;markdown编辑工具&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://macdown.uranusjr.com/&quot;&gt;download&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;genymotion&quot;&gt;Genymotion&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;比virtual device更快速的虚拟机&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;android-studio&quot;&gt;Android Studio&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;android 开发必备&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;photoshop--cutterman&quot;&gt;Photoshop + CutterMan&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;通过cutterman实现快速切图&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;markman&quot;&gt;MarkMan&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;设计稿标注、测量工具&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.getmarkman.com/&quot;&gt;download&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;postman---rest-client-packaged-app&quot;&gt;Postman - REST Client (Packaged App)&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://chrome.google.com/webstore/detail/postman-rest-client-packa/fhbjgbiflinjbdggehcddcbncdddomop?hl=en&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;imageoptim&quot;&gt;ImageOptim&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;图片压缩, 减小apk体积&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://imageoptim.com/&quot;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;bartender&quot;&gt;Bartender&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;为mac设置二级菜单栏&lt;/li&gt;
+  &lt;li&gt;airport/user/tool/mac/&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Tue, 11 Mar 2014 20:11:55 +0800</pubDate>
+        <link>http://wilsonssss.github.io/wilson/update/2014/03/11/osx_commons/</link>
+        <guid isPermaLink="true">http://wilsonssss.github.io/wilson/update/2014/03/11/osx_commons/</guid>
+      </item>
+    
   </channel>
 </rss>
