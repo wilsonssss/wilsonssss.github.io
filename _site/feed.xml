@@ -7,15 +7,6 @@
     <atom:link href="http://wilsonssss.github.io/feed.xml" rel="self" type="application/rss+xml" />
     
       <item>
-        <title>hello-world</title>
-        <description>&lt;p&gt;this pretty world.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 30 Dec 2015 16:19:18 +0800</pubDate>
-        <link>http://wilsonssss.github.io/wilson/update/2015/12/30/hello-world/</link>
-        <guid isPermaLink="true">http://wilsonssss.github.io/wilson/update/2015/12/30/hello-world/</guid>
-      </item>
-    
-      <item>
         <title>搭建android sdk mirror </title>
         <description>&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;server端:&lt;/code&gt;&lt;/p&gt;
 
@@ -41,7 +32,7 @@
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;3.菜单栏 - packages - reload&lt;br /&gt;
-&lt;img src=&quot;../imgs/sdk_mirror.png&quot; width=&quot;300&quot; align=&quot;center&quot; /&gt;&lt;/li&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/wilsonssss/wilsonssss.github.io/master/imgs/sdk_mirror.png&quot; width=&quot;300&quot; align=&quot;center&quot; /&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Sun, 20 Jul 2014 16:19:18 +0800</pubDate>

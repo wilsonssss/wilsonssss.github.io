@@ -23,4 +23,4 @@ categories: wilson update
   * "Use download cache" 打钩, "Clear Cache"  
   * Force https:// to http:// 打钩’
 + 3.菜单栏 - packages - reload  
-<img src="../imgs/sdk_mirror.png" width="300" align="center"/>   
+<img src="https://raw.githubusercontent.com/wilsonssss/wilsonssss.github.io/master/imgs/sdk_mirror.png" width="300" align="center"/>   
